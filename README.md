@@ -1,1 +1,1 @@
-# COMP-H2011---GUI-Programming
+# COMP H2011 - GUI Programming
