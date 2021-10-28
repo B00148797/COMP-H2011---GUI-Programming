@@ -10,11 +10,11 @@ public class Lab5Part1 extends JFrame {
         JMenuBar jMenuBar = new JMenuBar();
 
         JMenu jMenuCities = new JMenu("Cities");
-        jMenuCities.add(new JMenuItem("Dublin"));
-        jMenuCities.add(new JMenuItem("Belfast"));
-        jMenuCities.add(new JMenuItem("Londonderry"));
-        jMenuCities.add(new JMenuItem("Galeway"));
-        jMenuCities.add(new JMenuItem("Bangor"));
+        jMenuCities.add(new JMenuItem("Dublin", new ImageIcon(new ImageIcon("images/Dublin.png").getImage().getScaledInstance(20, 20, Image.SCALE_DEFAULT))));
+        jMenuCities.add(new JMenuItem("Belfast", new ImageIcon(new ImageIcon("images/Belfast.png").getImage().getScaledInstance(20, 20, Image.SCALE_DEFAULT))));
+        jMenuCities.add(new JMenuItem("Londonderry", new ImageIcon(new ImageIcon("images/Londonderry.png").getImage().getScaledInstance(20, 20, Image.SCALE_DEFAULT))));
+        jMenuCities.add(new JMenuItem("Galeway", new ImageIcon(new ImageIcon("images/Galeway.png").getImage().getScaledInstance(20, 20, Image.SCALE_DEFAULT))));
+        jMenuCities.add(new JMenuItem("Cork", new ImageIcon(new ImageIcon("images/Cork.png").getImage().getScaledInstance(20, 20, Image.SCALE_DEFAULT))));
 
         jMenuBar.add(jMenuCities);
 
