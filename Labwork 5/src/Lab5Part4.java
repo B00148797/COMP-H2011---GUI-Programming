@@ -1,7 +1,67 @@
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class Lab5Part4 extends JFrame {
+public class Lab5Part4 extends JFrame implements ActionListener {
+
+    JLabel jLabel;
+    JTextArea jTextArea;
+    JMenuItem jMenuItemLocalNews, jMenuItemInternationalNews, jMenuItemWeather;
+
+    public Lab5Part4(){
+        JFrame jFrame = new JFrame("Lab5Part3");
+        jFrame.setSize(300, 300);
+
+        JMenuBar jMenuBar = new JMenuBar();
+
+        JMenu jMenuNews = new JMenu("News");
+
+        jMenuItemLocalNews = new JMenuItem("Local News");
+        jMenuItemLocalNews.addActionListener(this);
+        jMenuItemInternationalNews = new JMenuItem("International News");
+        jMenuItemInternationalNews.addActionListener(this);
+        jMenuItemWeather = new JMenuItem("Weather");
+        jMenuItemWeather.addActionListener(this);
+
+        jMenuNews.add(jMenuItemLocalNews);
+        jMenuNews.add(jMenuItemInternationalNews);
+        jMenuNews.add(jMenuItemWeather);
+
+        jMenuBar.add(jMenuNews);
+
+        jLabel = new JLabel("Select a sub menu", SwingConstants.CENTER);
+
+        jTextArea = new JTextArea(null, "", 5,20);
+        jTextArea.setLineWrap(true);
+
+        JPanel jPanel = new JPanel();
+        jPanel.add(jLabel);
+        jPanel.add(jTextArea);
+
+
+
+        jFrame.add(jPanel);
+        jFrame.setJMenuBar(jMenuBar);
+        jFrame.setVisible(true);
+        jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    }
+
     public static void main(String[] args) {
+        Lab5Part4 lab5Part4 = new Lab5Part4();
+    }
 
+    @Override
+    public void actionPerformed(ActionEvent actionEvent) {
+        Object o = actionEvent.getSource();
+        if (o == jMenuItemLocalNews){
+            jLabel.setIcon(new ImageIcon("images/News.png"));
+            jTextArea.setText("As always it is raining in Dublin. Erasmus students are wet");
+        }else if(o == jMenuItemInternationalNews){
+            jLabel.setIcon(new ImageIcon("images/InternationalNews.png"));
+            jTextArea.setText("Special international flash, the president American has made a new haircut");
+        } else if(o == jMenuItemWeather){
+            jLabel.setIcon(new ImageIcon("images/Weather.png"));
+            jTextArea.setText("Today the weather will be fine with a temperature ranging from 20 ° to 23 ° for the maximum");
+        }
     }
 }
