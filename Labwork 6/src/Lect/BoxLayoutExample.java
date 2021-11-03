@@ -2,14 +2,10 @@ package Lect;
 //Luke Raeside ITB 2015
 //An example of BoxLayout in use
 
-import java.awt.GraphicsConfiguration;
-
-import javax.swing.Box;
 import javax.swing.BoxLayout;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-
 
 public class BoxLayoutExample extends JFrame {
 

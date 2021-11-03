@@ -10,9 +10,7 @@ public class Lab6Part1 extends JFrame implements ActionListener {
         JFrame jFrame = new JFrame("Lab.Lab6Part1");
         jFrame.setSize(300, 300);
 
-
-
-
+        //TODO: add code of Lab 6 Part 1.
 
         jFrame.setVisible(true);
         jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
