@@ -2,6 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 
 public class Lab3Part5 extends JFrame {
+
     public static void main(String[] args) {
         JFrame jFrame = new JFrame("Lab3Part5");
 
