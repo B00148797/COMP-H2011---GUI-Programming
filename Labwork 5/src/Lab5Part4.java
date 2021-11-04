@@ -1,6 +1,8 @@
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
 
 public class Lab5Part4 extends JFrame implements ActionListener {
 
@@ -16,11 +18,18 @@ public class Lab5Part4 extends JFrame implements ActionListener {
 
         JMenu jMenuNews = new JMenu("News");
 
+        KeyStroke ctrlA = KeyStroke.getKeyStroke(KeyEvent.VK_A, Toolkit.getDefaultToolkit().getMenuShortcutKeyMask());
+        KeyStroke ctrlZ = KeyStroke.getKeyStroke(KeyEvent.VK_Z, Toolkit.getDefaultToolkit().getMenuShortcutKeyMask());
+        KeyStroke ctrlE = KeyStroke.getKeyStroke(KeyEvent.VK_E, Toolkit.getDefaultToolkit().getMenuShortcutKeyMask());
+
         jMenuItemLocalNews = new JMenuItem("Local News");
+        jMenuItemLocalNews.setAccelerator(ctrlA);
         jMenuItemLocalNews.addActionListener(this);
         jMenuItemInternationalNews = new JMenuItem("International News");
+        jMenuItemInternationalNews.setAccelerator(ctrlZ);
         jMenuItemInternationalNews.addActionListener(this);
         jMenuItemWeather = new JMenuItem("Weather");
+        jMenuItemWeather.setAccelerator(ctrlE);
         jMenuItemWeather.addActionListener(this);
 
         jMenuNews.add(jMenuItemLocalNews);
@@ -33,12 +42,12 @@ public class Lab5Part4 extends JFrame implements ActionListener {
 
         jTextArea = new JTextArea(null, "", 5,20);
         jTextArea.setLineWrap(true);
+        jTextArea.setEditable(false);
+        jTextArea.setAutoscrolls(true);
 
         JPanel jPanel = new JPanel();
         jPanel.add(jLabel);
         jPanel.add(jTextArea);
-
-
 
         jFrame.add(jPanel);
         jFrame.setJMenuBar(jMenuBar);
