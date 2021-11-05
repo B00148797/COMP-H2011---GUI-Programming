@@ -11,8 +11,8 @@ public class Lab5Part4 extends JFrame implements ActionListener {
     JMenuItem jMenuItemLocalNews, jMenuItemInternationalNews, jMenuItemWeather;
 
     public Lab5Part4(){
-        JFrame jFrame = new JFrame("Lab5Part3");
-        jFrame.setSize(300, 300);
+        setTitle("Lab5Part3");
+        setSize(300, 300);
 
         JMenuBar jMenuBar = new JMenuBar();
 
@@ -25,9 +25,11 @@ public class Lab5Part4 extends JFrame implements ActionListener {
         jMenuItemLocalNews = new JMenuItem("Local News");
         jMenuItemLocalNews.setAccelerator(ctrlA);
         jMenuItemLocalNews.addActionListener(this);
+
         jMenuItemInternationalNews = new JMenuItem("International News");
         jMenuItemInternationalNews.setAccelerator(ctrlZ);
         jMenuItemInternationalNews.addActionListener(this);
+
         jMenuItemWeather = new JMenuItem("Weather");
         jMenuItemWeather.setAccelerator(ctrlE);
         jMenuItemWeather.addActionListener(this);
@@ -49,14 +51,14 @@ public class Lab5Part4 extends JFrame implements ActionListener {
         jPanel.add(jLabel);
         jPanel.add(jTextArea);
 
-        jFrame.add(jPanel);
-        jFrame.setJMenuBar(jMenuBar);
-        jFrame.setVisible(true);
-        jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        add(jPanel);
+        setJMenuBar(jMenuBar);
+        setVisible(true);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
 
     public static void main(String[] args) {
-        Lab5Part4 lab5Part4 = new Lab5Part4();
+        new Lab5Part4();
     }
 
     @Override

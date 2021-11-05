@@ -7,14 +7,15 @@ public class Lab5Part2 extends JFrame implements ActionListener {
 
     JLabel jLabel;
     JMenuItem jMenuItemOrange, jMenuItemSFR, jMenuItemBouygues, jMenuItemFree;
+    JMenuBar jMenuBar;
+    JMenu jMenuFrenchOperator;
 
     public Lab5Part2(){
-        JFrame jFrame = new JFrame("Mobile networks");
+        setTitle("Mobile networks");
+        setSize(300, 300);
 
-        jFrame.setSize(300, 300);
-
-        JMenuBar jMenuBar = new JMenuBar();
-        JMenu jMenuFrenchOperator = new JMenu("French operator");
+        jMenuBar = new JMenuBar();
+        jMenuFrenchOperator = new JMenu("French operator");
 
         jMenuItemOrange = new JMenuItem("Orange");
         jMenuItemOrange.addActionListener(this);
@@ -35,15 +36,15 @@ public class Lab5Part2 extends JFrame implements ActionListener {
         jMenuBar.add(jMenuFrenchOperator);
 
         jLabel = new JLabel("", SwingConstants.CENTER);
-        jFrame.add(jLabel);
+        add(jLabel);
 
-        jFrame.setJMenuBar(jMenuBar);
-        jFrame.setVisible(true);
-        jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setJMenuBar(jMenuBar);
+        setVisible(true);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
 
     public static void main(String[] args) {
-        Lab5Part2 lab5Part2 = new Lab5Part2();
+        new Lab5Part2();
     }
 
     @Override
@@ -57,10 +58,10 @@ public class Lab5Part2 extends JFrame implements ActionListener {
                 jLabel.setIcon(new ImageIcon(new ImageIcon("images/SFR.png").getImage().getScaledInstance(100, 100, Image.SCALE_DEFAULT)));
                 break;
             case "Bouygues Telecom":
-                jLabel.setIcon(new ImageIcon(new ImageIcon("images/Bouygues Telecom.jpg").getImage().getScaledInstance(100, 100, Image.SCALE_DEFAULT)));
+                jLabel.setIcon(new ImageIcon(new ImageIcon("images/Bouygues Telecom.jpg").getImage().getScaledInstance(200, 100, Image.SCALE_DEFAULT)));
                 break;
             case "Free":
-                jLabel.setIcon(new ImageIcon(new ImageIcon("images/Free.png").getImage().getScaledInstance(100, 100, Image.SCALE_DEFAULT)));
+                jLabel.setIcon(new ImageIcon(new ImageIcon("images/Free.png").getImage().getScaledInstance(200, 100, Image.SCALE_DEFAULT)));
                 break;
             default:
                 break;
