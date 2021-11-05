@@ -3,47 +3,54 @@ import java.awt.*;
 
 public class Lab3Part5 extends JFrame {
 
-    public static void main(String[] args) {
-        JFrame jFrame = new JFrame("Lab3Part5");
+    JLabel jLabelTitle, jLabelInfoScreen, imageIcon;
+    JButton jButtonWITHDRAW, jButtonDEPOSIT, jButtonTRANSFER, jButtonBALANCES, jButtonINFO, jButtonINVESTMENTS;
+    JPanel jPanelLeft, jPanelRight;
 
-        jFrame.setSize(500, 500);
+    public Lab3Part5(){
+        setTitle("Lab3Part5");
+        setSize(500, 500);
 
-        JLabel jLabelTitle = new JLabel("ATM - TU Dublin", SwingConstants.CENTER);
+        jLabelTitle = new JLabel("ATM - TU Dublin", SwingConstants.CENTER);
         jLabelTitle.setFont(new Font("Raleway", Font.BOLD, 40));
-        JLabel jLabelInfoScreen = new JLabel("Choose an action on the touchscreen :");
+        jLabelInfoScreen = new JLabel("Choose an action on the touchscreen :");
 
         //Pannel left
-        JPanel jPanelLeft = new JPanel();
+        jPanelLeft = new JPanel();
         jPanelLeft.setLayout(new BoxLayout(jPanelLeft, BoxLayout.Y_AXIS));
 
-        JButton jButtonWITHDRAW = new JButton("WITHDRAW", new ImageIcon("images/Logo Cercle.png"));
-        JButton jButtonDEPOSIT = new JButton("DEPOSIT", new ImageIcon("images/Logo Cercle.png"));
-        JButton jButtonTRANSFER = new JButton("TRANSFER", new ImageIcon("images/Logo Cercle.png"));
+        jButtonWITHDRAW = new JButton("WITHDRAW", new ImageIcon("images/Logo Cercle.png"));
+        jButtonDEPOSIT = new JButton("DEPOSIT", new ImageIcon("images/Logo Cercle.png"));
+        jButtonTRANSFER = new JButton("TRANSFER", new ImageIcon("images/Logo Cercle.png"));
 
         jPanelLeft.add(jButtonWITHDRAW);
         jPanelLeft.add(jButtonDEPOSIT);
         jPanelLeft.add(jButtonTRANSFER);
 
         //Pannel right
-        JPanel jPanelRight = new JPanel();
+        jPanelRight = new JPanel();
         jPanelRight.setLayout(new BoxLayout(jPanelRight, BoxLayout.Y_AXIS));
 
-        JButton jButtonBALANCES = new JButton("BALANCES", new ImageIcon("images/Logo Cercle.png"));
-        JButton jButtonINFO = new JButton("INFO", new ImageIcon("images/Logo Cercle.png"));
-        JButton jButtonINVESTMENTS = new JButton("INVESTMENTS", new ImageIcon("images/Logo Cercle.png"));
+        jButtonBALANCES = new JButton("BALANCES", new ImageIcon("images/Logo Cercle.png"));
+        jButtonINFO = new JButton("INFO", new ImageIcon("images/Logo Cercle.png"));
+        jButtonINVESTMENTS = new JButton("INVESTMENTS", new ImageIcon("images/Logo Cercle.png"));
 
         jPanelRight.add(jButtonBALANCES);
         jPanelRight.add(jButtonINFO);
         jPanelRight.add(jButtonINVESTMENTS);
 
-        JLabel imageIcon = new JLabel(new ImageIcon("images/Logo Euro.png"));
+        imageIcon = new JLabel(new ImageIcon("images/Logo Euro.png"));
 
-        jFrame.add(imageIcon, BorderLayout.CENTER);
-        jFrame.add(jLabelTitle, BorderLayout.NORTH);
-        jFrame.add(jPanelLeft, BorderLayout.WEST);
-        jFrame.add(jPanelRight, BorderLayout.EAST);
+        add(imageIcon, BorderLayout.CENTER);
+        add(jLabelTitle, BorderLayout.NORTH);
+        add(jPanelLeft, BorderLayout.WEST);
+        add(jPanelRight, BorderLayout.EAST);
 
-        jFrame.setVisible(true);
-        jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setVisible(true);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+    }
+
+    public static void main(String[] args) {
+        new Lab3Part5();
     }
 }
