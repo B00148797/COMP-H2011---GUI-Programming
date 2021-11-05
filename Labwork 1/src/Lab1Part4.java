@@ -41,7 +41,6 @@ public class Lab1Part4 {
         for (int i = name.length()-1 ; i > 0 ; i--){
             nameReverse += name.charAt(i - 1);
         }
-
         return nameReverse;
     }
 }

@@ -6,7 +6,6 @@ public class Lab1Part1 {
     private static Integer ageMaximal = 122;
 
     public static void main(String[] args) {
-
         Scanner myAge = new Scanner(System.in);
         System.out.print("Enter you age: ");
 

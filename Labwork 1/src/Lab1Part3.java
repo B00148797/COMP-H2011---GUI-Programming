@@ -9,13 +9,11 @@ public class Lab1Part3 {
     };
 
     public static void main(String[] args) {
-
         for (int c = 0 ; c < rainfallAndTemperature.length ; c++){
             System.out.print("\u001B[33m" + "Day " + (c + 1) + ": " + "\u001B[0m");
             for (int l = 0 ; l < 1 ; l++){
                 System.out.println(rainfallAndTemperature[c][l] + "mm" + "\t" + rainfallAndTemperature[c][l] + "°C");
             }
         }
-
     }
 }
