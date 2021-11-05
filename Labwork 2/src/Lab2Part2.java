@@ -1,24 +1,31 @@
 import javax.swing.*;
 
 public class Lab2Part2 extends JFrame {
-    public static void main(String[] args) {
-        JFrame jFrame = new JFrame("Lab2Part2");
 
-        jFrame.setSize(300, 300);
+    JLabel labelNoImage, imageLabel;
+    JPanel holderPanel;
 
-        JPanel holderPanel = new JPanel();
+    public Lab2Part2(){
+        setTitle("Lab2Part2");
+        setSize(300, 300);
 
-        JLabel labelNoImage = new JLabel("This is a label no image.");
+        holderPanel = new JPanel();
 
-        JLabel imageLabel = new JLabel("Label with image.");
+        labelNoImage = new JLabel("This is a label no image.");
+
+        imageLabel = new JLabel("Label with image.");
         imageLabel.setIcon(new ImageIcon("images/Logo Google.png"));
 
         holderPanel.add(labelNoImage);
         holderPanel.add(imageLabel);
 
-        jFrame.add(holderPanel);
+        add(holderPanel);
 
-        jFrame.setVisible(true);
-        jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setVisible(true);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+    }
+
+    public static void main(String[] args) {
+        new Lab2Part2();
     }
 }

@@ -2,24 +2,31 @@ import javax.swing.*;
 
 //Create class and extends JFrame
 public class Lab2Part1 extends JFrame {
-    public static void main(String[] args) {
-        JFrame jFrame = new JFrame("Lab2Part1");
+
+    JPanel contentPane;
+
+    public Lab2Part1(){
+        setTitle("Lab2Part1");
 
         //Set size and visibility of the JFrame
-        jFrame.setSize(300, 300);
+        setSize(300, 300);
 
         //Set resizable (NOT resizable)
-        jFrame.setResizable(false);
+        setResizable(false);
 
         //Set location
-        jFrame.setLocationRelativeTo(null);
+        setLocationRelativeTo(null);
 
         //Set the variable contentPane to reference content pane of JFrame
-        JPanel contentPane = new JPanel();
+        contentPane = new JPanel();
 
-        jFrame.add(contentPane);
+        add(contentPane);
 
-        jFrame.setVisible(true);
-        jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setVisible(true);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+    }
+
+    public static void main(String[] args) {
+        new Lab2Part1();
     }
 }
