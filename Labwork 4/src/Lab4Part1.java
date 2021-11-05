@@ -1,7 +1,6 @@
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.Random;
 
 public class Lab4Part1 extends JFrame implements ActionListener {
 
@@ -10,8 +9,8 @@ public class Lab4Part1 extends JFrame implements ActionListener {
     JPanel jPanel;
 
     public Lab4Part1(){
-        JFrame jFrame = new JFrame("Lab4Part1");
-        jFrame.setSize(300, 300);
+        setTitle("Lab4Part1");
+        setSize(300, 300);
 
         jPanel = new JPanel();
 
@@ -23,13 +22,13 @@ public class Lab4Part1 extends JFrame implements ActionListener {
         jPanel.add(jLabel);
         jPanel.add(jButton);
 
-        jFrame.add(jPanel);
-        jFrame.setVisible(true);
-        jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        add(jPanel);
+        setVisible(true);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
 
     public static void main(String[] args) {
-        Lab4Part1 lab4Part1 = new Lab4Part1();
+        new Lab4Part1();
     }
 
     public int getRandomNumber(int min, int max) {
@@ -43,7 +42,7 @@ public class Lab4Part1 extends JFrame implements ActionListener {
 
             switch (randomNumber){
                 case 0:
-                    jLabel.setText("Comment ca va?");
+                    jLabel.setText("Comment ça va?");
                     break;
                 case 1:
                     jLabel.setText("كيف حالك؟");

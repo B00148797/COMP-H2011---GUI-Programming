@@ -12,8 +12,8 @@ public class Lab4Part3 extends JFrame implements ActionListener {
     JPanel jPanel;
 
     public Lab4Part3(){
-        JFrame jFrame = new JFrame("Lab4Part3");
-        jFrame.setSize(300, 300);
+        setTitle("Lab4Part3");
+        setSize(300, 300);
         jPanel = new JPanel();
         jPanel.setLayout(new BorderLayout());
 
@@ -27,13 +27,13 @@ public class Lab4Part3 extends JFrame implements ActionListener {
         jComboBox.addActionListener(this);
         jPanel.add(jComboBox, BorderLayout.CENTER);
 
-        jFrame.add(jPanel);
-        jFrame.setVisible(true);
-        jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        add(jPanel);
+        setVisible(true);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
 
     public static void main(String[] args) {
-        Lab4Part3 lab4Part3 = new Lab4Part3();
+        new Lab4Part3();
     }
 
     @Override

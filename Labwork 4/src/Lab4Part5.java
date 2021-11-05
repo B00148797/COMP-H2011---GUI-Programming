@@ -11,8 +11,8 @@ public class Lab4Part5 extends JFrame implements ActionListener {
     JButton jButtonTopUp, jButtonMakeCall, jButtonSendText;
 
     public Lab4Part5(){
-        JFrame jFrame = new JFrame("Lab4Part5");
-        jFrame.setSize(300, 300);
+        setTitle("Lab4Part5");
+        setSize(300, 300);
         jPanel = new JPanel();
         jPanel.setLayout(new BorderLayout());
 
@@ -33,13 +33,13 @@ public class Lab4Part5 extends JFrame implements ActionListener {
         jPanelButton.add(jButtonSendText);
         jPanel.add(jPanelButton, BorderLayout.CENTER);
 
-        jFrame.add(jPanel);
-        jFrame.setVisible(true);
-        jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        add(jPanel);
+        setVisible(true);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
 
     public static void main(String[] args) {
-        Lab4Part5 lab4Part5 = new Lab4Part5();
+        new Lab4Part5();
     }
 
     @Override
@@ -75,7 +75,6 @@ public class Lab4Part5 extends JFrame implements ActionListener {
             jButtonMakeCall.setEnabled(false);
             jButtonSendText.setEnabled(false);
         }
-
         jLabelBalance.setText("Balance: " + balance + "€");
     }
 }

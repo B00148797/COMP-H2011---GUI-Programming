@@ -11,8 +11,8 @@ public class Lab4Part2 extends JFrame implements ActionListener {
     JPanel jPanel;
 
     public Lab4Part2(){
-        JFrame jFrame = new JFrame("Lab4Part2");
-        jFrame.setSize(300, 300);
+        setTitle("Lab4Part2");
+        setSize(300, 300);
 
         jPanel = new JPanel();
 
@@ -24,13 +24,13 @@ public class Lab4Part2 extends JFrame implements ActionListener {
         jPanel.add(colourSelector);
         jPanel.add(changeColour);
 
-        jFrame.add(jPanel);
-        jFrame.setVisible(true);
-        jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        add(jPanel);
+        setVisible(true);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
 
     public static void main(String[] args) {
-        Lab4Part2 lab4Part2 = new Lab4Part2();
+        new Lab4Part2();
     }
 
     @Override
