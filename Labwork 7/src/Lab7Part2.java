@@ -6,25 +6,30 @@ import java.awt.event.ActionListener;
 public class Lab7Part2 extends JFrame implements ActionListener {
 
     JInternalFrame jInternalFrame;
+    JDesktopPane jDesktopPane;
     Integer widthJFrame = 600, heightJFrame = 600;
     Integer frameCount = 0;
 
     public Lab7Part2(){
         setTitle("Lab7Part1");
         setSize(widthJFrame, heightJFrame);
-        setLayout(new GridLayout(5, 5));
+
+        jDesktopPane = new JDesktopPane();
 
         for (int i = 0 ; i < 5 ; i++){
             for (int j = 0 ; j < 5 ; j++){
                 frameCount++;
-                jInternalFrame = new JInternalFrame("Frame: " + frameCount);
-                //jInternalFrame.setSize(widthJFrame/5, heightJFrame/5);
+                jInternalFrame = new JInternalFrame("Frame: " + frameCount,true,true,true,true);
+                jInternalFrame.setSize(200, 200);
+                jInternalFrame.setDesktopIcon(new JInternalFrame.JDesktopIcon(jInternalFrame));
+                jInternalFrame.setLocation(frameCount*6, frameCount*6);
                 jInternalFrame.setVisible(true);
 
-                add(jInternalFrame);
+                jDesktopPane.add(jInternalFrame);
             }
         }
 
+        add(jDesktopPane);
         setVisible(true);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
