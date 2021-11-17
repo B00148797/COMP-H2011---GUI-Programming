@@ -12,7 +12,7 @@ public class Lab7Part2 extends JFrame implements ActionListener {
     Integer positionX = 5, positionY = 5;
 
     public Lab7Part2(){
-        setTitle("Lab7Part1");
+        setTitle("Lab7Part2");
         setSize(widthJFrame, heightJFrame);
 
         jDesktopPane = new JDesktopPane();
@@ -24,7 +24,6 @@ public class Lab7Part2 extends JFrame implements ActionListener {
                 frameCount++;
                 jInternalFrame = new JInternalFrame("Frame: " + frameCount,true,true,true,true);
                 jInternalFrame.setSize(200, 200);
-                jInternalFrame.setDesktopIcon(new JInternalFrame.JDesktopIcon(jInternalFrame));
                 jInternalFrame.setLocation(positionX, positionY);
                 jInternalFrame.setVisible(true);
 
