@@ -10,7 +10,7 @@ public class Lab8Part1 extends JFrame implements ActionListener {
     JFileChooser jFileChooser;
 
     public Lab8Part1(){
-        setTitle("Lab7Part1");
+        setTitle("Lab8Part1");
         setSize(500, 500);
 
         showFileName = new JLabel("No file is selected.");
