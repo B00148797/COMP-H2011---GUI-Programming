@@ -8,24 +8,18 @@ public class Lab8Part3 extends JFrame implements MouseMotionListener {
     JLabel jLabel;
     JPanel jPanel;
 
-    public int getRandomNumber(int min, int max) {
-        return (int) ((Math.random() * (max - min)) + min);
-    }
-
     public Lab8Part3(){
         setTitle("Lab8Part3");
         setSize(500, 500);
         setLayout(new BorderLayout());
 
         jPanel = new JPanel();
-
         jLabel = new JLabel("You found me!", SwingConstants.CENTER);
+        jLabel.setForeground(Color.WHITE);
         jLabel.addMouseMotionListener(this);
 
         jPanel.add(jLabel);
-
         add(jPanel, BorderLayout.CENTER);
-
         setVisible(true);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
