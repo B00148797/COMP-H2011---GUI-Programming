@@ -29,17 +29,17 @@ public class Lab6Part2 extends JFrame implements ActionListener {
 
         jPanel1 = new JPanel();
         jPanel1.setLayout(new BoxLayout(jPanel1, BoxLayout.Y_AXIS));
-        jPanel1.add(new JLabel("jPanel1"));
+        jPanel1.add(new JLabel(new ImageIcon("images/Acasia.png")));
         jPanel1.add(jButtonNext1);
 
         jPanel2 = new JPanel();
         jPanel2.setLayout(new BoxLayout(jPanel2, BoxLayout.Y_AXIS));
-        jPanel2.add(new JLabel("jPanel2"));
+        jPanel2.add(new JLabel(new ImageIcon("images/Caduques.png")));
         jPanel2.add(jButtonNext2);
 
         jPanel3 = new JPanel();
         jPanel3.setLayout(new BoxLayout(jPanel3, BoxLayout.Y_AXIS));
-        jPanel3.add(new JLabel("jPanel3"));
+        jPanel3.add(new JLabel(new ImageIcon("images/Saule.png")));
         jPanel3.add(jButtonNext3);
 
         jPanelMain.add(jPanel1);

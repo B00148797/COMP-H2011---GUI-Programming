@@ -5,7 +5,7 @@ import java.awt.event.ActionListener;
 
 public class Lab8Part2 extends JFrame implements ActionListener {
 
-    JPanel jPanelLeft, jPanelRight, jPanel3;
+    JPanel mainPanel, jPanelLeft, jPanelRight, jPanel3;
     JButton jButtonLeft, jButtonRight;
 
     public Lab8Part2(){
@@ -13,13 +13,12 @@ public class Lab8Part2 extends JFrame implements ActionListener {
         setSize(500, 500);
         setLayout(new BorderLayout());
 
-        JPanel mainPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
+        mainPanel = new JPanel();
+        mainPanel.setLayout(new GridLayout());
 
         jPanelLeft = new JPanel();
-        jPanelLeft.setPreferredSize(new Dimension(getWidth()/4,getHeight()/4));
         jPanelLeft.setBackground(Color.RED);
         jPanelRight = new JPanel();
-        jPanelRight.setPreferredSize(new Dimension(getWidth()/4,getHeight()/4));
         jPanelRight.setBackground(Color.BLUE);
 
         mainPanel.add(jPanelLeft);
