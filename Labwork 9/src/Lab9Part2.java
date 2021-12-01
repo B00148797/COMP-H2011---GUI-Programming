@@ -49,10 +49,23 @@ public class Lab9Part2 extends JFrame implements ActionListener {
             JDialog jDialog = new JDialog(this, "You are choose: ");
             jDialog.setSize(300, 200);
             jLabelImage.setText(jComboBox.getSelectedItem().toString());
-            jDialog.add(jLabelImage);
 
+            switch (jComboBox.getSelectedItem().toString()){
+                case "Swim":
+                    jLabelImage.setIcon(new ImageIcon("images/Swim.png"));
+                    break;
+                case "Sleep":
+                    jLabelImage.setIcon(new ImageIcon("images/Sleep.png"));
+                    break;
+                case "Eat":
+                    jLabelImage.setIcon(new ImageIcon("images/Eat.png"));
+                    break;
+                case "Drink":
+                    jLabelImage.setIcon(new ImageIcon("images/Drink.png"));
+                    break;
+            }
+            jDialog.add(jLabelImage);
             jDialog.setVisible(true);
         }
-
     }
 }
