@@ -11,6 +11,12 @@ public class Lab9Part4 extends JFrame{
     public void paint(Graphics g)
     {
         super.paint(g);
+        DrawBody(g);
+        DrawHead(g);
+        DrawText(g);
+    }
+
+    void DrawBody(Graphics g){
         g.setColor(new Color(0, 0, 0));
         g.fillRect(125, 200, 50, 200);
         g.fillRect(325, 200, 50, 200);
@@ -27,7 +33,9 @@ public class Lab9Part4 extends JFrame{
         g.fillOval(245, 245-30, 10, 10);
         g.fillOval(245, 245, 10, 10);
         g.fillOval(245, 245+30, 10, 10);
+    }
 
+    void DrawHead(Graphics g){
         File path = new File("images/");
         BufferedImage image = null;
         try {
@@ -36,7 +44,9 @@ public class Lab9Part4 extends JFrame{
             e.printStackTrace();
         }
         g.drawImage(image, 208, 20, null);
+    }
 
+    void DrawText(Graphics g){
         g.setColor(new Color(0, 125, 0));
         g.drawString("Oh! Oh! Oh", 300, 150);
     }
